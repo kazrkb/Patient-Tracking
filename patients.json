@@ -1,1 +1,202 @@
-{"P001": {"name": "Ananya Verma", "city": "Guwahati", "age": 28, "gender": "female", "height": 1.65, "weight": 90.0, "bmi": 33.06, "verdict": "Obese"}, "P002": {"name": "Ravi Mehta", "city": "Mumbai", "age": 35, "gender": "male", "height": 1.75, "weight": 85, "bmi": 27.76, "verdict": "Overweight"}, "P003": {"name": "Sneha Kulkarni", "city": "Pune", "age": 22, "gender": "female", "height": 1.6, "weight": 45, "bmi": 17.58, "verdict": "Underweight"}, "P004": {"name": "Arjun Verma", "city": "Mumbai", "age": 40, "gender": "male", "height": 1.8, "weight": 90.0, "bmi": 27.78, "verdict": "Normal"}, "P005": {"name": "Neha Sinha", "city": "Kolkata", "age": 30, "gender": "female", "height": 1.55, "weight": 75, "bmi": 31.22, "verdict": "Obese"}}
+{
+    "P001": {
+      "name": "Tariq Rahman",
+      "city": "Dhaka",
+      "age": 45,
+      "gender": "male",
+      "height": 1.70,
+      "weight": 72.0,
+      "bmi": 24.91,
+      "verdict": "Normal"
+    },
+    "P002": {
+      "name": "Sadia Islam",
+      "city": "Chittagong",
+      "age": 32,
+      "gender": "female",
+      "height": 1.55,
+      "weight": 68.0,
+      "bmi": 28.30,
+      "verdict": "Overweight"
+    },
+    "P003": {
+      "name": "Rafiqul Hasan",
+      "city": "Sylhet",
+      "age": 50,
+      "gender": "male",
+      "height": 1.65,
+      "weight": 85.0,
+      "bmi": 31.22,
+      "verdict": "Obese"
+    },
+    "P004": {
+      "name": "Nusrat Jahan",
+      "city": "Rajshahi",
+      "age": 24,
+      "gender": "female",
+      "height": 1.60,
+      "weight": 42.0,
+      "bmi": 16.41,
+      "verdict": "Underweight"
+    },
+    "P005": {
+      "name": "Mehedi Hasan",
+      "city": "Khulna",
+      "age": 29,
+      "gender": "male",
+      "height": 1.78,
+      "weight": 75.0,
+      "bmi": 23.67,
+      "verdict": "Normal"
+    },
+    "P006": {
+      "name": "Farzana Akter",
+      "city": "Barisal",
+      "age": 38,
+      "gender": "female",
+      "height": 1.52,
+      "weight": 74.0,
+      "bmi": 32.03,
+      "verdict": "Obese"
+    },
+    "P007": {
+      "name": "Arif Hossain",
+      "city": "Rangpur",
+      "age": 41,
+      "gender": "male",
+      "height": 1.68,
+      "weight": 65.0,
+      "bmi": 23.03,
+      "verdict": "Normal"
+    },
+    "P008": {
+      "name": "Sumaiya Khan",
+      "city": "Mymensingh",
+      "age": 27,
+      "gender": "female",
+      "height": 1.58,
+      "weight": 55.0,
+      "bmi": 22.03,
+      "verdict": "Normal"
+    },
+    "P009": {
+      "name": "Kamal Uddin",
+      "city": "Comilla",
+      "age": 55,
+      "gender": "male",
+      "height": 1.72,
+      "weight": 90.0,
+      "bmi": 30.42,
+      "verdict": "Obese"
+    },
+    "P010": {
+      "name": "Tania Rahman",
+      "city": "Gazipur",
+      "age": 31,
+      "gender": "female",
+      "height": 1.62,
+      "weight": 69.0,
+      "bmi": 26.29,
+      "verdict": "Overweight"
+    },
+    "P011": {
+      "name": "Nazmul Huda",
+      "city": "Bogura",
+      "age": 35,
+      "gender": "male",
+      "height": 1.66,
+      "weight": 80.0,
+      "bmi": 29.03,
+      "verdict": "Overweight"
+    },
+    "P012": {
+      "name": "Jannatul Ferdous",
+      "city": "Narayanganj",
+      "age": 22,
+      "gender": "female",
+      "height": 1.50,
+      "weight": 40.0,
+      "bmi": 17.78,
+      "verdict": "Underweight"
+    },
+    "P013": {
+      "name": "Shafiqul Islam",
+      "city": "Dhaka",
+      "age": 48,
+      "gender": "male",
+      "height": 1.75,
+      "weight": 95.0,
+      "bmi": 31.02,
+      "verdict": "Obese"
+    },
+    "P014": {
+      "name": "Ruma Begum",
+      "city": "Chittagong",
+      "age": 40,
+      "gender": "female",
+      "height": 1.54,
+      "weight": 52.0,
+      "bmi": 21.93,
+      "verdict": "Normal"
+    },
+    "P015": {
+      "name": "Aminul Islam",
+      "city": "Sylhet",
+      "age": 33,
+      "gender": "male",
+      "height": 1.80,
+      "weight": 82.0,
+      "bmi": 25.31,
+      "verdict": "Overweight"
+    },
+    "P016": {
+      "name": "Salma Khatun",
+      "city": "Rajshahi",
+      "age": 28,
+      "gender": "female",
+      "height": 1.65,
+      "weight": 88.0,
+      "bmi": 32.32,
+      "verdict": "Obese"
+    },
+    "P017": {
+      "name": "Rakib Hasan",
+      "city": "Khulna",
+      "age": 25,
+      "gender": "male",
+      "height": 1.70,
+      "weight": 50.0,
+      "bmi": 17.30,
+      "verdict": "Underweight"
+    },
+    "P018": {
+      "name": "Shireen Akter",
+      "city": "Barisal",
+      "age": 45,
+      "gender": "female",
+      "height": 1.57,
+      "weight": 63.0,
+      "bmi": 25.56,
+      "verdict": "Overweight"
+    },
+    "P019": {
+      "name": "Faruk Ahmed",
+      "city": "Rangpur",
+      "age": 39,
+      "gender": "male",
+      "height": 1.69,
+      "weight": 68.0,
+      "bmi": 23.81,
+      "verdict": "Normal"
+    },
+    "P020": {
+      "name": "Tasnim Alam",
+      "city": "Dhaka",
+      "age": 26,
+      "gender": "female",
+      "height": 1.61,
+      "weight": 46.0,
+      "bmi": 17.75,
+      "verdict": "Underweight"
+    }
+  }
