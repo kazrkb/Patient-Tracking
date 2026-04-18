@@ -1,14 +1,4 @@
 {
-  "P001": {
-    "name": "Khamba Tarek",
-    "city": "Dhaka",
-    "age": 45,
-    "gender": "Male",
-    "height": 1.7,
-    "weight": 72.0,
-    "bmi": 24.91,
-    "verdict": "Normal"
-  },
   "P002": {
     "name": "Sadia Islam",
     "city": "Chittagong",
