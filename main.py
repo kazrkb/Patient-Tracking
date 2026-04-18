@@ -29,17 +29,17 @@ class Patient(BaseModel):
         elif self.bmi <25:
             return 'Normal'
         elif self.bmi <30:
-            return 'Normal'
-        else:
             return 'Overweight'
+        else:
+            return 'Obese'
 
 class PatientUpdate(BaseModel):
-    name: Annotated[Optional[str], Field(..., description='Name of the patient')]
-    city: Annotated[Optional[str], Field(..., description='Living city of the patient')]
-    age: Annotated[Optional[int], Field(..., gt=0, lt=120, description='Age of the patient')]
-    gender: Annotated[Optional[Literal['Male','Female']], Field(..., description='Gender of the patient')]
-    height: Annotated[Optional[float], Field(...,gt=0,description='Height of the patient in meter')]
-    weight: Annotated[Optional[float], Field(..., gt=0, description='Weight of the patient in kg')]
+    name: Annotated[Optional[str], Field(None, description='Name of the patient')]
+    city: Annotated[Optional[str], Field(None, description='Living city of the patient')]
+    age: Annotated[Optional[int], Field(None, gt=0, lt=120, description='Age of the patient')]
+    gender: Annotated[Optional[Literal['Male','Female']], Field(None, description='Gender of the patient')]
+    height: Annotated[Optional[float], Field(None, gt=0, description='Height of the patient in meter')]
+    weight: Annotated[Optional[float], Field(None, gt=0, description='Weight of the patient in kg')]
 
 
 def load_data():
@@ -71,7 +71,7 @@ def view():
     return data
 
 @app.get('/patient/{patient_id}')
-def view_patient(patient_id: str = Path(..., description='ID of the patient in the DB', example='P001')):
+def view_patient(patient_id: str = Path(..., description='ID of the patient in the DB', examples=['P001'])):
     #load all patient data
     data = load_data()
 
@@ -81,9 +81,9 @@ def view_patient(patient_id: str = Path(..., description='ID of the patient in t
 
 @app.get('/sort')
 def sort_patients(sort_by: str = Query(..., description='Sort on the basis of height, weight, bmi'), order: str = Query('asc', description='Sort in asc or dsc order')):
-    valid_fileds = ['height','weight','bmi']
-    if sort_by not in valid_fileds:
-        raise HTTPException(status_code=400, detail=f'invalid field select from {valid_fileds}')
+    valid_fields = ['height','weight','bmi']
+    if sort_by not in valid_fields:
+        raise HTTPException(status_code=400, detail=f'invalid field select from {valid_fields}')
     order_by = ['asc', 'desc']
     if order not in order_by:
         raise HTTPException(status_code=400, detail=f'invalid order select between asc and dsc')
@@ -103,7 +103,7 @@ def create_patient(patient:Patient):
     if patient.id in data:
         raise HTTPException(status_code=400, detail='Patient already exist')
     # new patient add to the database
-    data[patient.id] = patient.model_dump(exclude=['id'])
+    data[patient.id] = patient.model_dump(exclude={'id'})
 
     # save into json file
     save_data(data)
@@ -111,8 +111,16 @@ def create_patient(patient:Patient):
 
 
 @app.put('/edit/{patient_id}')
-def update_patient(patinet_id:str,patient_update:PatientUpdate):
+def update_patient(patient_id: str, patient_update: PatientUpdate):
     data = load_data()
-    if patinet_id not in data:
+    if patient_id not in data:
         raise HTTPException(status_code=404, detail='Patient not found!')
-    existing_patient_info = data[patinet_id]
+
+    existing_patient = Patient(id=patient_id, **data[patient_id])
+    updated_patient = existing_patient.model_copy(
+        update=patient_update.model_dump(exclude_unset=True)
+    )
+
+    data[patient_id] = updated_patient.model_dump(exclude={'id'})
+    save_data(data)
+    return JSONResponse(status_code=200,content={'message': 'Patient updated successfully'})
